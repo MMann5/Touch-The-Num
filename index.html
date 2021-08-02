@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Touch nums</title>
+</head>
+
+<body onload="init()">
+    <h1>Touch The Num</h1>
+    <div class="container">
+        <button class="startGame" onclick="toggleGame()">New Game</button>
+        <div class="radio-btn">
+            <label><h3>EASY</h3>
+                <input type="radio" checked="checked" name="radio" onclick="chooseLevel(this)" value="16" />
+            </label>
+            <label><h3>AMATEUR</h3>
+                <input type="radio" name="radio" onclick="chooseLevel(this)" value="25" />
+            </label>
+            <label><h3>EXPERT</h3>
+                <input type="radio" name="radio" onclick="chooseLevel(this)" value="36" />
+            </label>
+        </div>
+        <div class="gameContainer">
+            <div class="gameTime">
+                <label><b>Timer:</b></label>
+                <label class="timer"></label>
+            </div>
+
+            <div class="nextNumber">
+                <label><b>Next Number:</b></label>
+                <label class="nextNum"></label>
+            </div>
+
+            <table border="1" cellpadding="10">
+                <tbody class="board"></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="modal">
+        <button onclick="closeModal()">CLOSE</button>
+        <h2>WIN!</h2>
+    </div>
+
+    <script src="js/main.js"></script>
+    <footer> by Michael Mann</footer>
+</body>
+
+</html>
